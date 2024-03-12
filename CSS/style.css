@@ -71,6 +71,14 @@ body {
     gap: 6px;
     font-size: 14px;
     font-weight: 400;
+    background-image: url("../images/man-white.svg");
+    background-repeat: no-repeat;
+    width: 60px;
+    justify-content: flex-end;
+}
+
+.header-init-link-active {
+    background-image: url("../images/man-blue.svg");
 }
 
 .header-init-text {
@@ -78,9 +86,33 @@ body {
     text-decoration: underline solid;
 }
 
+.header-init-text-active {
+    color: #1648A8;
+}
+
 .header-social {
     display: flex;
     gap: 30px;
+}
+
+.header-social-telega {
+    background-image: url("../images/telega-white.png");
+    width: 20px;
+    height: 20px;    
+}
+
+.header-social-telega-active {
+    background-image: url("../images/telega-blue.png");
+}
+
+.header-social-watsap {
+    background-image: url("../images/whatsap-white.png");
+    width: 20px;
+    height: 20px;
+}
+
+.header-social-watsap-active {
+    background-image: url("../images/whatsap-blue.png");
 }
 
 .header-phone {
@@ -101,6 +133,13 @@ body {
 
 .header-bag {
     position: relative;
+    background-image: url("../images/bag-white.png");
+    height: 24px;
+    width: 24px;
+}
+
+.header-bag-active {
+    background-image: url("../images/bag-blue.png");
 }
 
 .header-bag-text {
@@ -113,22 +152,41 @@ body {
     left: 16px;
 }
 
+.header-bag-text-active {
+    background-color: #1648A8;
+    color: #FFFFFF;
+}
+
 .header-bag-mini {
     position: absolute;
     left: 50%;
     translate: -44%;
+    background-image: url("../images/bagger-grey.png");
     display: none;
+    width: 190px;
+    height: 51px;
+}
+
+.header-bag-mini-active {
+    background-image: url("../images/bagger-blue.png");
 }
 
 .header-bag-mini-content {
     position: absolute;
     top: 15px;
     left: 80px;
+    background-image: url("../images/bag-white.png");
+    height: 24px;
+    width: 24px;
+}
+
+.header-bag-mini-content-active {
+    background-image: url("../images/bag.png");
 }
 
 .header-bag-text-number {
     font-size: 12px;
-    margin-top: -7px;
+    margin-top: -8px;
     margin-left: -3px;
 }
 
