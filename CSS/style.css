@@ -460,6 +460,7 @@ body {
 .upper-content-slider {
     overflow: hidden;
     background-color: #F3F3F3;
+    width: 385px;
 }
 
 .slider-list {
@@ -1040,6 +1041,10 @@ body {
     .upper-content {
         flex-direction: column;
         gap: 21px;
+    }
+
+    .upper-content-slider {
+        width: 350px;
     }
 
     .slider-list {
