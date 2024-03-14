@@ -46,7 +46,6 @@ body {
     font-weight: 500;
     font-size: 14px;
     color: #1F2324;
-    /* background-color: #F3F3F3; */
 }
 
 .container {
@@ -99,6 +98,7 @@ body {
     background-image: url("../images/telega-white.png");
     width: 20px;
     height: 20px;    
+    background-repeat: no-repeat;
 }
 
 .header-social-telega-active {
@@ -209,6 +209,86 @@ body {
     background-color: #1F2324;
 }
 
+.menu-btn-x {
+    display: none;
+}
+
+.menu-list-social {
+    display: none;
+}
+
+.menu-list-social::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 110%;
+    top: 0;
+    left: -43px;
+    background-color: #D9D9D9;
+}
+
+.menu-list-social-phone {
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    gap: 7px;
+    padding-top: 45px;
+}
+
+.menu-list-social-links {
+    display: flex;
+    gap: 38px;
+    padding-top: 29px;
+}
+
+.header-social-telega-mini {
+    background-image: url("../images/telega-big.png");
+    width: 37px;
+    height: 37px;    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-social-watsap-mini {
+    background-image: url("../images/whatsapp-big.png");
+    width: 37px;
+    height: 37px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu-list-inner {
+    display: none;
+}
+
+.menu-list-inner::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 110%;
+    top: 0;
+    left: -43px;
+    background-color: #D9D9D9;
+}
+
+.menu-list-inner-link {
+    display: flex;
+    justify-content: flex-end;
+    background-image: url("../images/man-white.svg");
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 80px;
+    margin-top: 31px;
+}
+
+.menu-list-inner-text {
+    font-size: 21px;
+    line-height: 25px;
+    color: #969696;
+    text-decoration: underline solid;
+    margin-top: -3px;
+}
+
 .header-menu {
     padding-top: 37px;
     padding-bottom: 30px;
@@ -219,6 +299,50 @@ body {
     gap: 45px;
     font-size: 16px;
     line-height: 19px;
+}
+
+.header-menu-list{
+    position: relative;
+    transition: all 0.5s;
+}
+
+.header-menu-list ul {
+    position: absolute;
+    left: 0px;
+    top: 17px;
+    padding: 9px 30px 10px 30px;
+    display: none;
+    z-index: 1;
+    background-color: #FFFFFF;
+}
+
+.header-menu-list ul::before {
+    content: "";
+    position: absolute;
+    width: 104px;
+    height: 3px;
+    background-color: #1648A8;
+    top: 5px;
+    left: 0;
+}
+
+.header-menu-list ul li {
+    font-size: 16px;
+    line-height: 51px;
+}
+
+.header-menu-list ul .add-line::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    background-color: #E5E5E5;
+}
+
+.header-menu-list:hover > ul {
+    display: flex;
+    flex-direction: column;
 }
 
 .main-content {
@@ -333,13 +457,18 @@ body {
     padding-bottom: 50px;
 }
 
+.upper-content-slider {
+    overflow: hidden;
+    background-color: #F3F3F3;
+}
+
 .slider-list {
     display: flex;
     width: 385px;
     height: 324px;
     background-color: #F3F3F3;
     gap: 75px;
-    overflow: hidden;
+    transition: ease 3s;
 }
 
 .slide-img {
@@ -377,14 +506,14 @@ body {
     margin-left: 10px;
 }
 
-.slider-pagination span {
+.pagination {
     width: 41px;
     height: 34px;
     border: solid 1px #DBDBDB;
     cursor: pointer;
 }
 
-.slider-pagination span.pag-active {
+.pag-active {
     border: solid 1px #1648A8;
 }
 
@@ -517,11 +646,11 @@ body {
 }
 
 .content-down-top-btn1 {
-    background-color: #42516E;
+    background-color: #E5E5E5;
     border-radius: 5px 0px 0px 0px;
     width: 208px;
     height: 41px;
-    color: #FFFFFF;
+    color: #1F2324;
     font-size: 16px;
     line-height: 19px;
 }
@@ -533,6 +662,11 @@ body {
     height: 41px;
     font-size: 16px;
     line-height: 19px;
+}
+
+.content-down-top-btn1-active {
+    background-color: #42516E;
+    color: #FFFFFF;
 }
 
 .content-down-info {
@@ -699,8 +833,9 @@ body {
     gap: 35px;
 }
 
-.footer-social-link-telega {
-    padding-right: 37px;
+.footer-social-logo {
+    display: flex;
+    gap: 37px;
 }
 
 .footer-social-info-text {
@@ -794,8 +929,49 @@ body {
         color: #FFFFFF;
     }
 
+    .menu {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 855px;
+        z-index: 2;
+        background-color: #FFFFFF;
+        margin-left: -4%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 43px;
+        transform: translateY(-110%);
+        transition: transform .5s ease;
+    }
+
+    .menu.menu-open {
+        transform: translateY(0%);
+    }
+    
     .header-menu {
+        padding-top: 49px;
+        font-size: 18px;
+        line-height: 21px;
+        flex-direction: column;
+    }
+
+    .menu-btn-x {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: block;
+    }
+
+    .header-menu-list:hover > ul {
         display: none;
+    }
+    
+    .menu-list-social {
+        display: block;
+    }
+    
+    .menu-list-inner {
+        display: block;
     }
 
     .header-adress {
@@ -1024,5 +1200,9 @@ body {
 
     .header-bag-text-number {
         font-size: 16px;
+    }
+
+    .footer-social-logo {
+        justify-content: center;
     }
 }
